@@ -49,6 +49,10 @@ class Interface(ABC):
     def show_help(self):
         pass
     
+    @abstractmethod
+    def show_phone(self, args):
+        pass
+    
 class ConsoleInterfase(Interface):
     def __init__(self, filename = "addressbook.pkl"):
         self.filename = filename
